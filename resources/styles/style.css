@@ -1,6 +1,6 @@
 /* General features */
 
-html, body {
+html {
   font-family: Arial;
   font-size: 16px;
 }
@@ -14,6 +14,7 @@ html, body {
 .img-container img {
   width: 100%;
   height: auto;
+  display: block;
 }
 .txt-container {
   justify-content: center;
@@ -53,18 +54,17 @@ a {
 
 .box.large {
   width: 60%;
-/*  margin: 2rem 1.5rem; */
 }
 .box-container {
   display: flex;
   flex-direction: column;
   width: 40%;
-  border: 5px solid green;
-
+  border: 2px solid green;
 }
 .box.horizontal {
   display: flex;
   padding: 1rem;
+
   border: 1px solid black;
 }
 
@@ -141,7 +141,6 @@ li {
   margin-top: 64px;
 }
 #banner .img-container {
-/*  width: 100%; */
   border: 2px solid grey;
   margin: 2rem 1.5rem;
 
@@ -179,11 +178,12 @@ li {
   margin: 2rem 1.5rem;
 }
 
+/*
 #info4 img {
   height: 100%;
   width: auto;
 }
-
+*/
 .name {
   font-size: 0.9rem;
   margin-top: 2rem;
@@ -235,10 +235,149 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 0 1.5rem;
-  font-size: 0.85rem;
 }
 
+footer span,
 footer li {
+  padding: 0;
+  font-size: 0.85rem;
   margin-top: 0.5rem;
   margin-bottom: 3rem;
+}
+
+
+@media only screen and (max-width: 1050px) {
+  h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  #banner h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+  .box.small {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .main {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .box.large {
+    width: 100%;
+  }
+  .box-container {
+    width: 100%;
+  }
+  #banner .img-container {
+    margin: 0;
+    max-height: 20rem;
+    align-items: flex-start;
+  }
+  #banner .txt-container {
+    padding: 0 1.15rem;
+  }
+
+  .button {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+  .button a {
+    padding: 0.5rem;
+    width: 50%;
+  }
+  h1 {
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  #info .box.large {
+    display: none;
+  }
+  #info .box-container {
+  padding-bottom: 2rem;
+}
+  .box.small {
+    width: 45%;
+/*    margin: 0.5rem;
+    border: 1px solid green; */
+  }
+  #sub-thesis .box-container {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 710px) {
+
+/* Nav bar with pictures */
+  nav, ul,
+  .logo .txt-container {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  header {
+    justify-content: space-around;
+  }
+  .logo {
+    margin: 0;
+  }
+  .mobile.img-container a {
+    height: 100%;
+  }
+  #banner .mobile.img-container img {
+    width: 35px;
+  }
+  #banner .img-container {
+    max-height: 11.5rem;
+  }
+  .button a {
+    width: 100%;
+    max-width: 450px;
+  }
+
+/* work on flows */
+  .desktop {
+    display: none;
+  }
+  .box.horizontal {
+    flex-wrap: wrap;
+  }
+  #info2 {
+    padding-top: 1rem;
+  }
+  .box.horizontal .img-container,
+  .box.horizontal .txt-container {
+    width: 100%;
+  }
+  #info .txt-container {
+    margin-left: 1rem;
+  }
+  .box.horizontal .txt-container {
+    max-width: 100%;
+    margin-top: 1.5rem;
+  }
+  #courses .img-container,
+  #courses p {
+    display: none
+  }
+  .box.small {
+    width: 100%;
+    max-width: 450px;
+    margin: 0.5rem 1rem;
+  }
+  footer span {
+    margin: 1rem 0;
+  }
 }
