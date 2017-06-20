@@ -1,3 +1,5 @@
+/* General features */
+
 html, body {
   font-family: Arial;
   font-size: 16px;
@@ -24,15 +26,60 @@ h1 {
   font-size: 2.5rem;
   line-height: 3.5rem;
   font-weight: bold;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 h2 {
   font-size: 1.5rem;
+  line-height: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 p {
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 0 0;
+  line-height: 1.5rem;
+}
+a {
+  text-decoration: none;
+}
+
+.main {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  border: 1px solid red;
+}
+
+.box.large {
+  width: 60%;
+/*  margin: 2rem 1.5rem; */
+}
+.box-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  border: 5px solid green;
+
+}
+.box.horizontal {
+  display: flex;
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+.box.horizontal .img-container {
+  width: 35%;
+  height: 100%;
+  border: 1px solid red;
+}
+
+.box.horizontal .txt-container {
+  margin-left: 2rem;
+  max-width: 55%;
+}
+.box.horizontal .txt-container h2 {
+  margin: 0rem;
 }
 /* Header */
 
@@ -53,7 +100,6 @@ header {
 header a {
   display: flex;
   align-items: center;
-  text-decoration: none;
 }
 .logo .img-container img{
   width: 2.5rem;
@@ -74,10 +120,10 @@ nav {
   display: flex;
   align-items: center;
 }
-nav ul {
+ul {
   display: flex;
 }
-nav li {
+li {
   margin-left: 1rem;
 }
 
@@ -86,23 +132,113 @@ nav li {
 }
 
 /* Banner */
+
 .empty {
-  display: flex;
-}
-.main {
-  padding: 2rem 1.5rem;
   display: flex;
 }
 
 #banner {
   margin-top: 64px;
-  border: 1px solid red;
 }
 #banner .img-container {
-  width: 60%;
+/*  width: 100%; */
+  border: 2px solid grey;
+  margin: 2rem 1.5rem;
+
+}
+
+#banner h1 {
+  font-size: 3rem;
 }
 
 #banner .txt-container {
+  height: 100%;
   padding: 2.5rem;
-  width: 40%;
+}
+.button {
+  padding-right: 5rem;
+  display: flex;
+  justify-content: center;
+}
+.button a {
+  border: 1px solid grey;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* Info section */
+
+#info2 {
+  padding-top: 2rem;
+}
+
+.box.large .img-container,
+.box.large .txt-container {
+  margin: 2rem 1.5rem;
+}
+
+#info4 img {
+  height: 100%;
+  width: auto;
+}
+
+.name {
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* Courses section */
+
+#courses {
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+.intro {
+  width: 100%;
+  text-align: center;
+}
+.box.small {
+  width: 25%;
+  margin: 0.5rem;
+  border: 1px solid green;
+}
+.box.small .txt-container {
+  height: auto;
+  justify-content: flex-start;
+  padding: 1rem;
+}
+.box.small .txt-container h2 {
+  margin: 0;
+}
+
+video {
+  width: 100%;
+}
+#thesis1 .img-container {
+  margin-top: 0;
+}
+#thesis1 h2 {
+  margin-bottom: 0rem;
+}
+
+#thesis h1 {
+  margin-bottom: 2rem;
+}
+
+/* footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  font-size: 0.85rem;
+}
+
+footer li {
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
 }
