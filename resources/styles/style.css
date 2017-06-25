@@ -3,6 +3,7 @@
 html {
   font-family: Arial;
   font-size: 16px;
+  background-color: #E5F5F1;
 }
 
 .img-container {
@@ -90,7 +91,7 @@ header {
   height: 64px;
   justify-content: space-between;
   position: fixed;
-  background-color: white;
+  background-color: #E5F5F1;
 }
 
 .logo {
@@ -139,6 +140,7 @@ li {
 
 #banner {
   margin-top: 64px;
+  background-color: #40B0E8;
 }
 #banner .img-container {
   border: 2px solid grey;
@@ -165,6 +167,7 @@ li {
   padding: 0.5rem;
   text-align: center;
   width: 100%;
+  background-color: #FF6EE2;
 }
 
 /* Info section */
@@ -360,6 +363,7 @@ footer li {
   .box.horizontal .img-container,
   .box.horizontal .txt-container {
     width: 100%;
+    height: auto;
   }
   #info .txt-container {
     margin-left: 1rem;
