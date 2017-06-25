@@ -3,7 +3,7 @@
 html {
   font-family: Arial;
   font-size: 16px;
-  background-color: #E5F5F1;
+  background-color: white;
 }
 
 .img-container {
@@ -19,7 +19,6 @@ html {
 }
 .txt-container {
   justify-content: center;
-  border: 1px solid blue;
   display: flex;
   flex-direction: column;
 }
@@ -30,12 +29,14 @@ h1 {
   font-weight: bold;
   margin-top: 2rem;
   margin-bottom: 1.5rem;
+  letter-spacing: 0.07rem;
 }
 
 h2 {
   font-size: 1.5rem;
   line-height: 2.5rem;
   margin-bottom: 2rem;
+  letter-spacing: 0.05rem;
 }
 
 p {
@@ -44,13 +45,17 @@ p {
 }
 a {
   text-decoration: none;
+  transition: color 400ms;
+  color: black;
+}
+a:hover {
+  color: #8E8F8E;
 }
 
 .main {
   padding: 0;
   width: 100%;
   display: flex;
-  border: 1px solid red;
 }
 
 .box.large {
@@ -60,19 +65,15 @@ a {
   display: flex;
   flex-direction: column;
   width: 40%;
-  border: 2px solid green;
 }
 .box.horizontal {
   display: flex;
   padding: 1rem;
-
-  border: 1px solid black;
 }
 
 .box.horizontal .img-container {
   width: 35%;
   height: 100%;
-  border: 1px solid red;
 }
 
 .box.horizontal .txt-container {
@@ -82,6 +83,12 @@ a {
 .box.horizontal .txt-container h2 {
   margin: 0rem;
 }
+
+.focus {
+  background-color: #edf861;
+  color: #ff3680;
+}
+
 /* Header */
 
 header {
@@ -91,7 +98,8 @@ header {
   height: 64px;
   justify-content: space-between;
   position: fixed;
-  background-color: #E5F5F1;
+  background-color: white;
+  color: black;
 }
 
 .logo {
@@ -101,7 +109,15 @@ header {
 header a {
   display: flex;
   align-items: center;
+  color: black;
+  transition: color 500ms;
 }
+header a:hover {
+  color: #8E8F8E;
+  transition: color 500ms;
+}
+
+
 .logo .img-container img{
   width: 2.5rem;
 }
@@ -140,12 +156,11 @@ li {
 
 #banner {
   margin-top: 64px;
-  background-color: #40B0E8;
+  background-color: #01b2fb;
+  color: white;
 }
 #banner .img-container {
-  border: 2px solid grey;
   margin: 2rem 1.5rem;
-
 }
 
 #banner h1 {
@@ -162,12 +177,17 @@ li {
   justify-content: center;
 }
 .button a {
-  border: 1px solid grey;
+  border: 1px solid black;
   border-radius: 0.25rem;
   padding: 0.5rem;
   text-align: center;
   width: 100%;
-  background-color: #FF6EE2;
+  background-color: white;
+  transition: background-color 400ms, color 400ms;
+}
+.button a:hover {
+  background-color: black;
+  color: white;
 }
 
 /* Info section */
@@ -181,12 +201,6 @@ li {
   margin: 2rem 1.5rem;
 }
 
-/*
-#info4 img {
-  height: 100%;
-  width: auto;
-}
-*/
 .name {
   font-size: 0.9rem;
   margin-top: 2rem;
@@ -198,16 +212,18 @@ li {
   flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 2rem;
+  background-color: #8DFFDE;
 }
 
 .intro {
   width: 100%;
   text-align: center;
+  color: black;
 }
 .box.small {
   width: 25%;
   margin: 0.5rem;
-  border: 1px solid green;
+  background-color: white;
 }
 .box.small .txt-container {
   height: auto;
@@ -217,6 +233,8 @@ li {
 .box.small .txt-container h2 {
   margin: 0;
 }
+
+/* Thesis section */
 
 video {
   width: 100%;
@@ -238,6 +256,7 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 0 1.5rem;
+  background-color: #8E8F8E;
 }
 
 footer span,
@@ -312,8 +331,6 @@ footer li {
 }
   .box.small {
     width: 45%;
-/*    margin: 0.5rem;
-    border: 1px solid green; */
   }
   #sub-thesis .box-container {
     display: none;
