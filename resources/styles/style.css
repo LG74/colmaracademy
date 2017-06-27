@@ -79,8 +79,11 @@ a:hover {
   padding: 0;
   width: 100%;
   display: flex;
+  display: -webkit-flex; /* Safari */
 }
-
+.box {
+  display: flex;
+}
 .box.large {
   width: 60%;
 }
@@ -90,7 +93,6 @@ a:hover {
   width: 40%;
 }
 .box.horizontal {
-  display: flex;
   padding: 1rem;
 }
 
@@ -110,9 +112,6 @@ a:hover {
 .focus {
   background-color: #edf861;
   color: #ff3680;
-}
-.empty {
-  display: flex;
 }
 
 /* Header */
@@ -320,6 +319,7 @@ footer li {
 @media only screen and (max-width: 870px), (max-device-width: 870px) {
   .main {
     flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
     justify-content: center;
   }
   .box.large {
@@ -328,6 +328,7 @@ footer li {
   .box-container {
     width: 100%;
   }
+
   #banner .img-container {
     margin: 0;
     max-height: 20rem;
@@ -336,7 +337,6 @@ footer li {
   #banner .txt-container {
     padding: 0 1.15rem;
   }
-
   .button {
     padding-right: 0;
     margin-bottom: 2rem;
@@ -377,7 +377,7 @@ footer li {
     display: none;
   }
   .mobile {
-    display: block;
+    display: flex;
   }
   header {
     justify-content: space-around;
@@ -431,7 +431,7 @@ footer li {
   }
 
   #courses .txt-container:hover {
-    height: 6rem;
+    height: 7rem;
   }
 
 
