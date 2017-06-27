@@ -1,7 +1,29 @@
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Anton Regular'), local('Anton-Regular'), url(https://fonts.gstatic.com/s/anton/v8/TS7BJzhU7AKgPn9R0AejYKCWcynf_cDxXwCLxiixG1c.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Merriweather Sans Bold'), local('MerriweatherSans-Bold'), url(https://fonts.gstatic.com/s/merriweathersans/v8/6LmGj5dOJopQKEkt88GowSMwD46KpV4ZaXo4aI1TkGT3rGVtsTkPsbDajuO5ueQw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+@font-face {
+  font-family: 'Rock Salt';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Rock Salt'), local('RockSalt'), url(https://fonts.gstatic.com/s/rocksalt/v6/Q94aHXFHGip10K5uxi1jOJBw1xU1rKptJj_0jans920.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
 /* General features */
 
 html {
-  font-family: Arial;
+  font-family: 'Merriweather Sans', Arial;
   font-size: 16px;
   background-color: white;
 }
@@ -24,16 +46,17 @@ html {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 1.7rem;
   line-height: 3.5rem;
   font-weight: bold;
   margin-top: 2rem;
   margin-bottom: 1.5rem;
-  letter-spacing: 0.07rem;
+  letter-spacing: 0.4rem;
+  font-family: 'Rock Salt', Times;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 2.5rem;
   margin-bottom: 2rem;
   letter-spacing: 0.05rem;
@@ -126,12 +149,16 @@ header a:hover {
 }
 .logo .txt-container {
   display: inline;
+  font-family: 'anton', arial;
+  letter-spacing: 0.07rem;
+  color: #8E8F8E;
 }
 header span {
   font-size: 1.5rem;
 }
 #colmar {
-  font-weight: bold
+  font-weight: bold;
+  color: black;
 }
 
 
@@ -155,7 +182,7 @@ li {
 
 
 #banner {
-  margin-top: 64px;
+  margin-top: 50px;
   background-color: #01b2fb;
   color: white;
 }
@@ -164,7 +191,7 @@ li {
 }
 
 #banner h1 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 #banner .txt-container {
@@ -181,6 +208,7 @@ li {
   border-radius: 0.25rem;
   padding: 0.5rem;
   text-align: center;
+  min-height: 1rem;
   width: 100%;
   background-color: white;
   transition: background-color 400ms, color 400ms;
@@ -270,15 +298,19 @@ footer li {
 
 @media only screen and (max-width: 1050px) {
   h1 {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
   }
   #banner h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
   h2 {
-    font-size: 1.2rem;
-    line-height: 2rem;
+    font-size: 1.05rem;
+    line-height: 1.8rem;
+  }
+  p {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
   }
   .box.small {
     width: 30%;
@@ -320,7 +352,7 @@ footer li {
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 1.5rem;
   }
   #info .box.large {
@@ -389,10 +421,20 @@ footer li {
     max-width: 100%;
     margin-top: 1.5rem;
   }
-  #courses .img-container,
-  #courses p {
-    display: none
+  #courses .img-container{
+    display: none;
   }
+  #courses .txt-container{
+    height: 1.4rem;
+    overflow: hidden;
+    transition: height 700ms;
+  }
+
+  #courses .txt-container:hover {
+    height: 6rem;
+  }
+
+
   .box.small {
     width: 100%;
     max-width: 450px;
